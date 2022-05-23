@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackEnd", "BackEnd", "{BCFA962A-1F68-4BDB-817E-4516C62A1161}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{5490B5C6-A232-4D79-BA6C-5906C5CB41B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedModel", "SharedModel", "{17554257-E8E8-4EC9-8E85-584B788A6CEB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppFinanciera.API", "AppFinanciera.API\AppFinanciera.API.csproj", "{9B1F3CAB-F95B-4414-ACA4-CE6C87D203BF}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AppFinanciera.SharedModel", "AppFinanciera.SharedModel\AppFinanciera.SharedModel.shproj", "{547436FF-6A68-4D46-96C6-78940470BAAA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppFinanciera.Client", "AppFinanciera.Client\AppFinanciera.Client.csproj", "{B356E3BF-9969-4C99-9522-E24D1562EC32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B1F3CAB-F95B-4414-ACA4-CE6C87D203BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B1F3CAB-F95B-4414-ACA4-CE6C87D203BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B1F3CAB-F95B-4414-ACA4-CE6C87D203BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B1F3CAB-F95B-4414-ACA4-CE6C87D203BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B356E3BF-9969-4C99-9522-E24D1562EC32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B356E3BF-9969-4C99-9522-E24D1562EC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B356E3BF-9969-4C99-9522-E24D1562EC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B356E3BF-9969-4C99-9522-E24D1562EC32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9B1F3CAB-F95B-4414-ACA4-CE6C87D203BF} = {BCFA962A-1F68-4BDB-817E-4516C62A1161}
+		{547436FF-6A68-4D46-96C6-78940470BAAA} = {17554257-E8E8-4EC9-8E85-584B788A6CEB}
+		{B356E3BF-9969-4C99-9522-E24D1562EC32} = {5490B5C6-A232-4D79-BA6C-5906C5CB41B1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9EDB1BE2-DDF1-43A2-B1C1-46D65E2E2D08}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		AppFinanciera.SharedModel\AppFinanciera.SharedModel.projitems*{547436ff-6a68-4d46-96c6-78940470baaa}*SharedItemsImports = 13
+		AppFinanciera.SharedModel\AppFinanciera.SharedModel.projitems*{9b1f3cab-f95b-4414-aca4-ce6c87d203bf}*SharedItemsImports = 5
+		AppFinanciera.SharedModel\AppFinanciera.SharedModel.projitems*{b356e3bf-9969-4c99-9522-e24d1562ec32}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

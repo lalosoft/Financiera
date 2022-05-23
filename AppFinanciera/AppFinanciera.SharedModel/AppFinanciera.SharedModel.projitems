@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>547436ff-6a68-4d46-96c6-78940470baaa</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>AppFinanciera.SharedModel</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ClienteTO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CuentaAhorroTO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CuentaClienteTO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enumeraciones.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FiltroReporte.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ReporteTO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TransaccionTO.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,65 @@
+﻿@page "/"
+
+<h3>Clientes</h3>
+
+<div class="row">
+    <div class="col-12">
+        <button @onclick="AbrirModal" class="btn btn-info">Agregar Cliente</button>
+    </div>
+
+    <div class="col-12 mt-2">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Numero de Identificacion</th>
+                    <th>Nombre</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (listClientes.Count > 0)
+                {
+                    foreach (var cte in listClientes)
+                    {
+                        <tr>
+                            <td>@cte.IdCliente</td>
+                            <td>@cte.NombreCliente</td>
+                            <td>
+                                <button class="btn btn-primary" @onclick="() => CuentasAhorro(cte.IdCliente)">Cuentas Ahorro</button>
+                            </td>
+                        </tr>
+                    }
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal" style="@style">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar Cliente</h5>
+                <button @onclick="CerrarModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 form-group">
+                            <label for="nombre">Nombre</label>
+                            <input id="nombre" @bind-value="cliente.NombreCliente" placeholder="Nombre Cliente" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" @onclick="() => GuardarCliente()">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" @onclick="CerrarModal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+

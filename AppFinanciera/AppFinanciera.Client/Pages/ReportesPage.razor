@@ -1,0 +1,55 @@
+﻿@page "/reportes"
+
+<h3>Reporte de movimientos</h3>
+
+<div class="row">
+    <div class="col">
+        <label for="clientes">#Cliente</label>
+        <select id="clientes" class="form-control" @onchange="OnChangeCliente">
+            @if (clientes.Count > 0)
+            {
+                foreach (var cte in clientes)
+                {
+                    <option value="@cte.IdCliente">@cte.NombreCliente</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="col">
+        <label for="cuentas">#Cuenta</label>
+        <select id="cuentas" class="form-control"  @onchange="OnChangeCuenta">
+            @if (cuentas.Count > 0)
+            {
+                foreach (var cta in cuentas)
+                {
+                    <option value="@cta.IdCuenta">@cta.IdCuenta</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div class="col-12 mt-4">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Monto</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (reporteMov.Count > 0)
+                {
+                    foreach (var rep in reporteMov)
+                    {
+                        <tr>
+                            <td>@rep.FechaTransaccion.ToString("dd-MM-yyyy hh:mm tt")</td>
+                            <td>$@rep.Monto</td>
+                            <td>@rep.Tipo</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
